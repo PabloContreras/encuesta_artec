@@ -32,4 +32,8 @@ class EncuestasController extends Controller
         $request->session()->flash('success', 'Se añadió correctamente la encuesta');
     	return back();
     }
+    public function index(){
+        $encuestas = Encuestas::all();
+        return view('index', compact('encuestas'));
+    }
 }
