@@ -65,7 +65,7 @@
         </style>
     </head>
     <body>
-      <div class="jumbotron">
+      <div class="jumbotron" style="background-color: white;">
         <div class="col-lg-12 text-center">
             <div class="row text-center">
                 <div class="col-md-5 pull-left">
@@ -225,6 +225,21 @@
           </div>
         </form>          
       </div>
+      <footer class="ftco-footer ftco-bg-dark ftco-section" style="padding-top: 20px; padding-bottom: 0px; background-color: #007bff;" id="datos-contacto">
+        <div class="container">          
+          <div class="row" >
+            <div class="col-md-12 text-center">
+              <p style="color: white;">
+                <b>Responsable de la aplicación:</b>
+                <br>
+                Pablo Einar Contreras Gutiérrez
+                <br>
+                Correo electrónico: p.contreras@eostechnology.mx
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </body>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </html>
