@@ -37,8 +37,8 @@
         <td>{{ $encuesta->sexo }}</td>
         <td>{{ $encuesta->deportes }}</td>
         <td>{{ $encuesta->musica == 'Ninguno' ? 'No escucha música' : $encuesta->musica }}</td>
-        <td>{{ $encuesta->pintor_famoso == '0' ? 'No conoce ningún pintor' : $encuesta->pintor_famoso }}</td>
-        <td>{{ $encuesta->desc_musica_clasica == '0' ? 'No sabe qué es la música clásica' : $encuesta->desc_musica_clasica }}</td>
+        <td>{{ $encuesta->pintor_famoso == '0' || 'o' ? 'No conoce ningún pintor' : $encuesta->pintor_famoso }}</td>
+        <td>{{ $encuesta->desc_musica_clasica == '0' || 'o' ? 'No sabe qué es la música clásica' : $encuesta->desc_musica_clasica }}</td>
         <td>{{ $encuesta->interprete == '0' ? 'No conoce ningún intérprete' : $encuesta->interprete }}</td>
         <td>{{ $encuesta->museos == '0' ? 'Nunca ha ido a un museo' : $encuesta->museos }}</td>
         <td>{{ $encuesta->gustos_lectura }}</td>
@@ -51,10 +51,10 @@
               Más de dos horas
             @endif
         </td>
-        <td>{{ $encuesta->gusto_videojuegos}}</td>
-        <td>{{ $encuesta->personaje_1}}</td>
-        <td>{{ $encuesta->personaje_2}}</td>
-        <td>{{ $encuesta->personaje_3}}</td>
+        <td>{{ $encuesta->gusto_videojuegos == '0' ? 'No juega videojuegos' : $encuesta->gusto_videojuegos }}</td>
+        <td>{{ $encuesta->personaje_1 == '0' ? 'Ninguno' : $encuesta->personaje_1 }}</td>
+        <td>{{ $encuesta->personaje_2 == '0' ? 'Ninguno' : $encuesta->personaje_2 }}</td>
+        <td>{{ $encuesta->personaje_3 == '0' ? 'Ninguno' : $encuesta->personaje_3 }}</td>
       </tr>
     @endforeach
   </tbody>
