@@ -11,7 +11,7 @@
   <table class="table table-hover">
   <thead>
     <tr>
-      <th scope="col">Nombre</th>
+      <th scope="col">Id</th>
       <th scope="col">Edad</th>
       <th scope="col">Sexo</th>
       <th scope="col">Deporte</th>
@@ -32,11 +32,11 @@
   <tbody>
     @foreach( $encuestas as $encuesta )
       <tr class="table-active">
-        <th> {{ $encuesta->nombre }} </th>
+        <th> {{ $encuesta->id }} </th>
         <td>{{ $encuesta->edad }}</td>
         <td>{{ $encuesta->sexo }}</td>
         <td>{{ $encuesta->deportes}}</td>
-        <td>{{ $encuesta->musica}}</td>}
+        <td>{{ $encuesta->musica == 'Ninguno' ? 'No escucha música' : $encuesta->musica}}</td>}
         <td>{{ $encuesta->pintor_famoso}}</td>
         <td>{{ $encuesta->desc_musica_clasica}}</td>
         <td>{{ $encuesta->interprete}}</td>
