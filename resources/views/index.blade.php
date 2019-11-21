@@ -52,9 +52,9 @@
             @endif
         </td>
         <td>{{ $encuesta->gusto_videojuegos == '0' ? 'No juega videojuegos' : $encuesta->gusto_videojuegos }}</td>
-        <td>{{ $encuesta->personaje_1 == '0' ? 'Ninguno' : $encuesta->personaje_1 }}</td>
-        <td>{{ $encuesta->personaje_2 == '0' ? 'Ninguno' : $encuesta->personaje_2 }}</td>
-        <td>{{ $encuesta->personaje_3 == '0' ? 'Ninguno' : $encuesta->personaje_3 }}</td>
+        <td>{{ $encuesta->personaje_1 == '0' || 'O' ? 'Ninguno' : $encuesta->personaje_1 }}</td>
+        <td>{{ $encuesta->personaje_2 == '0' || 'O' ? 'Ninguno' : $encuesta->personaje_2 }}</td>
+        <td>{{ $encuesta->personaje_3 == '0' || 'O' ? 'Ninguno' : $encuesta->personaje_3 }}</td>
       </tr>
     @endforeach
   </tbody>
