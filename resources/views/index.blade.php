@@ -31,18 +31,26 @@
   </thead>
   <tbody>
     @foreach( $encuestas as $encuesta )
-      <tr class="table-active">
+      <tr>
         <th> {{ $encuesta->id }} </th>
         <td>{{ $encuesta->edad }}</td>
         <td>{{ $encuesta->sexo }}</td>
-        <td>{{ $encuesta->deportes}}</td>
-        <td>{{ $encuesta->musica == 'Ninguno' ? 'No escucha música' : $encuesta->musica}}</td>}
-        <td>{{ $encuesta->pintor_famoso}}</td>
-        <td>{{ $encuesta->desc_musica_clasica}}</td>
-        <td>{{ $encuesta->interprete}}</td>
-        <td>{{ $encuesta->museos }}</td>
+        <td>{{ $encuesta->deportes }}</td>
+        <td>{{ $encuesta->musica == 'Ninguno' ? 'No escucha música' : $encuesta->musica }}</td>
+        <td>{{ $encuesta->pintor_famoso == '0' ? 'No conoce ningún pintor' : $encuesta->pintor_famoso }}</td>
+        <td>{{ $encuesta->desc_musica_clasica == '0' ? 'No sabe qué es la música clásica' : $encuesta->desc_musica_clasica }}</td>
+        <td>{{ $encuesta->interprete == '0' ? 'No conoce ningún intérprete' : $encuesta->interprete }}</td>
+        <td>{{ $encuesta->museos == '0' ? 'Nunca ha ido a un museo' : $encuesta->museos }}</td>
         <td>{{ $encuesta->gustos_lectura }}</td>
-        <td>{{ $encuesta->tiempo_lectura}}</td>
+        <td> 
+            @if( $encuesta->tiempo_lectura == '0')
+              Lee menos de una hora
+            @elseif( $encuesta->tiempo_lectura == '1')
+              Lee de una a dos horas
+            @else
+              Más de dos horas
+            @endif
+        </td>
         <td>{{ $encuesta->gusto_videojuegos}}</td>
         <td>{{ $encuesta->personaje_1}}</td>
         <td>{{ $encuesta->personaje_2}}</td>
