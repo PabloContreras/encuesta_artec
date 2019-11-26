@@ -18,3 +18,5 @@
 Route::get('/', 'EncuestasController@create');
 Route::post('/', 'EncuestasController@store')->name('store.encuesta');
 Route::get('/resultados', 'EncuestasController@index');
+
+Route::get('/grafica', 'EncuestasController@googleLineChart');
