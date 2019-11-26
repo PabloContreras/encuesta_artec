@@ -190,6 +190,9 @@
             chart: {
                 type: 'bar'
             },  
+            title: {
+                text: 'Interpretación de los resultados'
+            },   
             series: [{
                 name: 'Escucha música',
                 data:  [{{ $musica }}]
